@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int arr[5],i,val,index;
+    int n=5;
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout<<" "<<arr[i];
+    }
+    cout<<"Value to be searched for:";
+    cin>>val;
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]==val)
+        {
+            index=i;
+            break;
+        }
+        
+       
+    }
+    cout<<"Found at:"<<index;
+    
+    
+
+    return 0;
+}
+
