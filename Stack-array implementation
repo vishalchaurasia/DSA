@@ -1,0 +1,74 @@
+
+
+#include <iostream>
+int stack[8];
+int top=-1;
+int maxsize=8;
+using namespace std;
+
+int isfull()
+{
+    if(top==maxsize)
+    return 1;
+    else
+    return 0;
+}
+int push(int data)
+{
+    if(!isfull())
+    {
+        top+=1;
+        stack[top]=data;
+    }
+    else
+    cout<<"Stack is full";
+    return data;
+}
+
+int isempty()
+{
+    if(top==-1)
+    return 1;
+    else
+    return 0;
+}
+int pop()
+{
+    int data;
+    if(!isempty())
+    {
+        data=stack[top];
+        top=top-1;
+        return data;
+    }
+    else
+    {
+        cout<<"Stack is empty";
+    }
+    return data;
+}
+
+
+int main()
+{
+    int i;
+    
+    push(44);
+    push(5);
+    push(65);
+    push(23);
+    push(87);
+    cout<<"Stack elements:";
+    for(i=0;i<maxsize;i++)
+    {
+        cout<<"\n "<<stack[i];
+    }
+    cout<<"\nElements popped:\n";
+    while(!isempty())
+    {
+        int data=pop();
+        cout<<data<<endl;
+    }
+    
+    return 0;
+}
