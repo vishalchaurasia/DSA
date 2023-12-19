@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+#include <iostream> 
+#include <string>
+using namespace std;
+
+// string ispalindrome(string s)
+// {
+//     string p=s;
+//     reverse(p.begin(),p.end());
+//     if (s == p) {
+//         return "Yes";
+//     }
+//     else {
+//         return "No";
+//     }
+// }
+
+string ispalindrome(string s)
+{
+    for(int i=0;i<s.length()/2;i++)
+    {
+        if(s[i]!=s[s.length()-i-1])
+        {
+            return "no";
+        }
+    }
+    return "yes";
+}
+
+int main()
+{
+    string s="abcdcba";
+    cout<<ispalindrome(s);
+    return 0;
+}
