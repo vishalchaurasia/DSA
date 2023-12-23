@@ -1,0 +1,31 @@
+#include <bits/stdc++.h> 
+using namespace std;
+
+
+
+int main()
+{
+    set<int> empty_set;
+    empty_set.insert(10);
+    empty_set.insert(100);
+    empty_set.insert(1000);
+    empty_set.insert(10000);
+    cout<<"Set before:";
+    set<int>::iterator it;
+    for(it=empty_set.begin();it!=empty_set.end();it++)
+    {
+        cout<<' '<<*it;
+    }
+    cout<<"\n";
+    
+    cout<<"Set after:";
+    set<int> set1(set1);
+    empty_set.erase(10);
+    set<int>::iterator i;
+    for(i=empty_set.begin();i!=empty_set.end();i++)
+    {
+        cout<<' '<<*i;
+    }
+    cout<<"\n";
+    return 0;
+}
