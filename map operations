@@ -1,0 +1,18 @@
+#include <bits/stdc++.h> 
+using namespace std;
+
+int main()
+{
+    map<string, int> subjects;
+    subjects.insert({"mathematics",10});
+    subjects.insert({"physics",20});
+    subjects.insert({"chemistry",30});
+    subjects.insert({"english",40});
+    subjects.insert({"computerscience",50});
+    for(auto i = subjects.begin(); i != subjects.end(); ++i) 
+    {
+        cout << i->first<< ' ' << i->second << '\n';
+    }
+   cout << "\n\n";
+    return 0;
+}
