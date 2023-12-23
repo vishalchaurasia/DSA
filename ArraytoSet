@@ -1,0 +1,18 @@
+#include <bits/stdc++.h> 
+#include<set>
+using namespace std;
+
+int main()
+{
+    int a[] = {4, 11, 5, 3, 1, 6};
+    set<int> s;
+    for (int i : a) {
+        s.insert(i);
+    }
+    for (int i : s) {
+        cout << i << " ";
+    }
+    cout << "\n";
+
+    return 0;
+}
